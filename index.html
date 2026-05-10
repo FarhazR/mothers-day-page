@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Happy Mother's Day ❤️</title>
+
+  <style>
+    *{
+      margin:0;
+      padding:0;
+      box-sizing:border-box;
+      font-family: "Poppins", sans-serif;
+    }
+
+    body{
+      min-height:100vh;
+      display:flex;
+      justify-content:center;
+      align-items:center;
+      overflow:hidden;
+      padding:20px;
+
+      background:
+        linear-gradient(rgba(255,192,203,0.25), rgba(255,182,193,0.25)),
+        url("https://images.unsplash.com/photo-1518199266791-5375a83190b7?q=80&w=1600&auto=format&fit=crop");
+
+      background-size:cover;
+      background-position:center;
+      background-repeat:no-repeat;
+    }
+
+    .container{
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      gap:35px;
+      width:100%;
+      max-width:1500px;
+    }
+
+    .photo-column{
+      display:flex;
+      flex-direction:column;
+      gap:20px;
+    }
+
+    /* LEFT SIDE - LANDSCAPE IMAGES */
+    .left-column img{
+      width:320px;
+      height:180px;
+
+      object-fit:cover;
+      object-position:center;
+
+      border-radius:20px;
+      border:4px solid rgba(255,255,255,0.75);
+
+      box-shadow:0 8px 20px rgba(0,0,0,0.25);
+
+      transition:0.3s;
+    }
+
+    /* RIGHT SIDE - PORTRAIT IMAGES */
+    .right-column img{
+      width:200px;
+      height:280px;
+
+      object-fit:cover;
+      object-position:50% 70%;
+
+      border-radius:20px;
+      border:4px solid rgba(255,255,255,0.75);
+
+      box-shadow:0 8px 20px rgba(0,0,0,0.25);
+
+      transition:0.3s;
+    }
+
+    .photo-column img:hover{
+      transform:scale(1.05);
+    }
+
+    /* SCRAPBOOK ROTATION EFFECT */
+    .left-column img:nth-child(1){
+      transform: rotate(-3deg);
+    }
+
+    .left-column img:nth-child(2){
+      transform: rotate(2deg);
+    }
+
+    .left-column img:nth-child(3){
+      transform: rotate(-2deg);
+    }
+
+    .right-column img:nth-child(1){
+      transform: rotate(3deg);
+    }
+
+    .right-column img:nth-child(2){
+      transform: rotate(-2deg);
+    }
+
+    .right-column img:nth-child(3){
+      transform: rotate(2deg);
+    }
+
+    .card{
+      width:90%;
+      max-width:650px;
+
+      padding:45px;
+
+      border-radius:30px;
+
+      background:rgba(255,255,255,0.82);
+
+      backdrop-filter:blur(10px);
+
+      text-align:center;
+
+      box-shadow:0 10px 30px rgba(0,0,0,0.25);
+
+      animation:float 3s ease-in-out infinite;
+    }
+
+    .heart{
+      font-size:4rem;
+      margin-bottom:10px;
+      animation:pulse 1.3s infinite;
+    }
+
+    h1{
+      font-size:3rem;
+      margin-bottom:20px;
+      color:#8b1e3f;
+    }
+
+    p{
+      font-size:1.2rem;
+      line-height:1.9;
+      margin-bottom:18px;
+
+      color:#2d2d2d;
+      font-weight:500;
+    }
+
+    .footer{
+      margin-top:20px;
+      font-size:1rem;
+
+      color:#444;
+      font-weight:600;
+    }
+
+    @keyframes pulse{
+      0%{
+        transform:scale(1);
+      }
+
+      50%{
+        transform:scale(1.15);
+      }
+
+      100%{
+        transform:scale(1);
+      }
+    }
+
+    @keyframes float{
+      0%{
+        transform:translateY(0px);
+      }
+
+      50%{
+        transform:translateY(-6px);
+      }
+
+      100%{
+        transform:translateY(0px);
+      }
+    }
+
+    /* MOBILE RESPONSIVE */
+    @media(max-width:1200px){
+
+      .container{
+        flex-direction:column;
+      }
+
+      .photo-column{
+        flex-direction:row;
+        flex-wrap:wrap;
+        justify-content:center;
+      }
+
+      .left-column img{
+        width:220px;
+        height:130px;
+      }
+
+      .right-column img{
+        width:140px;
+        height:200px;
+      }
+    }
+
+    @media(max-width:700px){
+
+      .photo-column{
+        display:none;
+      }
+
+      h1{
+        font-size:2.3rem;
+      }
+
+      p{
+        font-size:1rem;
+      }
+
+      .card{
+        padding:35px;
+      }
+    }
+
+  </style>
+</head>
+
+<body>
+
+  <div class="container">
+
+    <!-- LEFT SIDE LANDSCAPE PHOTOS -->
+    <div class="photo-column left-column">
+
+      <img src="photo1.jpg" alt="Memory 1">
+
+      <img src="photo2.jpg" alt="Memory 2">
+
+      <img src="photo3.jpg" alt="Memory 3">
+
+    </div>
+
+
+    <!-- CENTER MESSAGE CARD -->
+    <div class="card">
+
+      <div class="heart">❤️</div>
+
+      <h1>Happy Mother's Day</h1>
+
+      <p>
+        Thank you for every sacrifice, every comforting word,
+        and every moment of unconditional love.
+      </p>
+
+      <p>
+        You are the reason behind so many beautiful memories,
+        and today is all about celebrating you 🌸
+      </p>
+
+      <p>
+        No matter where life takes me,
+        your love will always be my greatest strength.
+      </p>
+
+      <div class="footer">
+        Made with love 💖
+      </div>
+
+    </div>
+
+
+    <!-- RIGHT SIDE PORTRAIT PHOTOS -->
+    <div class="photo-column right-column">
+
+      <img src="photo4.jpg" alt="Memory 4">
+
+      <img src="photo5.jpg" alt="Memory 5">
+
+      <img src="photo6.jpg" alt="Memory 6">
+
+    </div>
+
+  </div>
+
+</body>
+</html>
