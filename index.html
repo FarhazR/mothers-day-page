@@ -208,20 +208,39 @@
 
     @media(max-width:700px){
 
+      .container{
+        flex-direction:column;
+        gap:20px;
+      }
+
       .photo-column{
-        display:none;
+        flex-direction:row;
+        flex-wrap:wrap;
+        justify-content:center;
+        gap:12px;
+      }
+
+      .left-column img{
+        width:140px;
+        height:90px;
+      }
+
+      .right-column img{
+        width:100px;
+        height:140px;
       }
 
       h1{
-        font-size:2.3rem;
+        font-size:2rem;
       }
 
       p{
-        font-size:1rem;
+        font-size:0.95rem;
+        line-height:1.7;
       }
 
       .card{
-        padding:35px;
+        padding:28px;
       }
     }
 
